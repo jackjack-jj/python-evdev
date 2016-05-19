@@ -100,6 +100,8 @@ def create_ecodes(headers=None):
 
     print('writing ecodes.c (using %s)' % ' '.join(headers))
     cmd = '%s genecodes.py %s > ecodes.c' % (sys.executable, ' '.join(headers))
+    print(cmd)
+    print("%s/evdev" % here)
     check_call(cmd, cwd="%s/evdev" % here, shell=True)
 
 
